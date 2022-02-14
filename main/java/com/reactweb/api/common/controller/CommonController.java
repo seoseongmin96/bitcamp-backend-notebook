@@ -20,8 +20,8 @@ import java.util.Date;
 @RestController
 public class CommonController {
     @GetMapping("/")
-    public String now(){
-        return new SimpleDateFormat("yyyy-MM-dd hh:mm:ss").format(new Date());
+    public String  now(){
+         return new SimpleDateFormat("yyyy-MM-dd hh:mm:ss").format(new Date());
 
     }
 }

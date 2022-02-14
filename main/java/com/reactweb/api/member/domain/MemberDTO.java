@@ -51,25 +51,25 @@ public class MemberDTO {
         public String getPhone1(){
     return phone1;
 }
-    public void setPhone1(){
+        public void setPhone1(){
         this.phone1 = phone1;
     }
-    public String getPhone2(){
+        public String getPhone2(){
         return phone2;
     }
-    public void setPhone2(String phone2){
+        public void setPhone2(String phone2){
         this.phone2 = phone2;
     }
-    public int getHeight(){
+        public int getHeight(){
         return height;
     }
-    public void setHeight(int height){
+        public void setHeight(int height){
         this.height = height;
     }
-    public String getDebutDate(){
+        public String getDebutDate(){
         return debutDate;
     }
-    public void setDebutDate(String debutDate){
+        public void setDebutDate(String debutDate){
         this.debutDate = debutDate;
     }
 
