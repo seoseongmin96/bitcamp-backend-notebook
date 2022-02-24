@@ -1,5 +1,7 @@
 package com.reactweb.api.member.service;
 
+import org.springframework.stereotype.Service;
+
 /**
  * packageName: com.reactweb.api.member.service
  * fileName   : MemberImpl
@@ -11,6 +13,7 @@ package com.reactweb.api.member.service;
  * ================================
  * 2022-02-11     seoseongmin        최초 생성
  */
+@Service
 public class MemberImpl implements MemberService{
     @Override
     public String membershiplist() {
@@ -39,6 +42,21 @@ public class MemberImpl implements MemberService{
 
     @Override
     public String checkthedetailsofthesavings() {
+        return null;
+    }
+
+    @Override
+    public String calc() {
+        return null;
+    }
+
+    @Override
+    public String bmi() {
+        return null;
+    }
+
+    @Override
+    public String grade() {
         return null;
     }
 }

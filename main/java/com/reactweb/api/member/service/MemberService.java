@@ -1,5 +1,7 @@
 package com.reactweb.api.member.service;
 
+import org.springframework.stereotype.Service;
+
 import java.util.Scanner;
 
 /**
@@ -13,6 +15,7 @@ import java.util.Scanner;
  * ================================
  * 2022-02-11     seoseongmin        최초 생성
  */
+
 public interface MemberService {
     String membershiplist();
     String membershipinformation();
@@ -20,5 +23,7 @@ public interface MemberService {
     String registertosendemails();
     String savingmoneylist();
     String checkthedetailsofthesavings();
-
+    String calc();
+    String bmi();
+    String grade();
 }
