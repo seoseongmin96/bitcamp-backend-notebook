@@ -1,5 +1,6 @@
 package com.reactweb.api.member.controller;
 
+import com.reactweb.api.member.domain.CalcDTO;
 import com.reactweb.api.member.domain.MemberDTO;
 import com.reactweb.api.member.service.MemberService;
 import lombok.RequiredArgsConstructor;
@@ -18,18 +19,23 @@ import org.springframework.web.bind.annotation.*;
  */
 @RestController
 @RequiredArgsConstructor
+@RequestMapping("/member")
 public class MemberController {
 
     private final MemberService service;
 
-    @GetMapping("/member/bmi/{name}/{height}/{weight}")
-    public String getBmi(@PathVariable String name,
-                         @PathVariable double height,
-                         @PathVariable double weight) {
-        System.out.println(" 리액트에서 넘어온 데이터: "+name);
-        System.out.println(" 리액트에서 넘어온 데이터: "+height);
-        System.out.println(" 리액트에서 넘어온 데이터: "+weight);
-        return "BMI 는 정상";
+   @PostMapping("/bmi") public String bmi(@RequestBody MemberDTO bmi){
+       return service.bmi(bmi);
+   }
 
-        }
-    }
+
+   @PostMapping("/calc") public String calc(@RequestBody CalcDTO calc){
+      return service.calc(calc);
+
+   }
+
+   @PostMapping("/grade") public String grade(@RequestBody MemberDTO grade){
+       return service.grade(grade);
+   }
+
+}

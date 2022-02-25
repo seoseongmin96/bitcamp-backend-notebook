@@ -1,5 +1,8 @@
 package com.reactweb.api.member.repository;
 
+import com.reactweb.api.member.domain.CalcDTO;
+import com.reactweb.api.member.domain.MemberDTO;
+
 /**
  * packageName: com.reactweb.api.member.repository
  * fileName   : MemberRepository
@@ -12,4 +15,9 @@ package com.reactweb.api.member.repository;
  * 2022-02-11     seoseongmin        최초 생성
  */
 public interface MemberRepository {
+
+
+    String bmi(MemberDTO bmi);
+
+    String grade(MemberDTO grade);
 }
