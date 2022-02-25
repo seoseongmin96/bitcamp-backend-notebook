@@ -52,11 +52,27 @@ public class MemberServiceImpl implements MemberService {
 
    @Override
    public String bmi(MemberDTO bmi) {
-      return repository.bmi(bmi);
-   }
 
+      double bmi1 = bmi.getWeight() / (bmi.getHeight() * bmi.getHeight()) * 10000;
+      String s = "";
+      if (bmi1 >= 35) {
+         s = "고도비만";
+      } else if (bmi1 >= 30) {
+         s = "중(重)도 비만 (2단계 비만)";
+      } else if (bmi1 >= 25) {
+         s = "경도 비만 (1단계 비만)";
+      } else if (bmi1 >= 23) {
+         s = "과체중";
+      } else if (bmi1 >= 18.5) {
+         s = "정상";
+      } else {
+         s = "저체중";
+      }
+      return String.format(bmi.getName() + s);
+   }
    @Override
    public String grade(MemberDTO grade) {
       return repository.grade(grade);
    }
 }
+
